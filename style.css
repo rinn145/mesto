@@ -1,0 +1,30 @@
+.page{
+    background-color: black;
+    max-width: 1280px;
+    height: 1217px;  
+}
+
+.header{
+    max-width: 880px;
+    height: 74px;
+}
+
+.logo{
+    margin: 45px 200px 41px;
+    width: 143px;
+    height: 33px;
+}
+
+.line{
+    display: flex;
+    margin: 0 auto;
+}
+
+/*Profile*/
+
+
+.avatar{
+    display: flex;
+    margin: 40px  200px 0px;
+    
+}
