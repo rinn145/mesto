@@ -30,8 +30,6 @@
     display: flex;
 }
 
-
-
 .avatar__kusto {
     align-items: center;
     display: flex;
@@ -49,6 +47,10 @@
     width: 120px;
     cursor: pointer;
 
+}
+
+.avatar__edit-button:hover {
+    opacity: .6;
 }
 
 .profile__wrapper {
@@ -115,3 +117,43 @@
     margin-top: 31px;
     border-bottom: rgba(84, 84, 84, .7);
 }
+
+.profile__add-button:hover {
+    opacity: .6;
+}
+
+.elements {
+    padding-top: 50px;
+    max-width: 880px;
+    min-height: 744px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer {
+    padding-top: 67px;
+    min-width: 318px;
+    max-height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+    
+}
+
+.footers {
+    max-width: 880px;
+    min-height: 120px;
+    margin: 0 auto;
+    border-bottom: rgba(84, 84, 84, .7);
+    position: relative;
+    display: flex;
+}
+
