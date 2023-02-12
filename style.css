@@ -135,6 +135,11 @@
     gap: 20px;
 }
 
+.caed {
+    width: 282px;
+    height: 361px;
+}
+
 .footer {
     padding-top: 67px;
     min-width: 318px;
@@ -150,7 +155,7 @@
 
 .footers {
     max-width: 880px;
-    min-height: 120px;
+    min-height: 109px;
     margin: 0 auto;
     border-bottom: rgba(84, 84, 84, .7);
     position: relative;
