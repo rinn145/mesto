@@ -192,7 +192,7 @@
     }
 }
 
-@media screen and (min-width:440px) and (max-width: 490px)  {
+@media screen and (min-width:440px) and (max-width: 550px)  {
     .header {
         overflow: hidden;
     }  
@@ -215,7 +215,7 @@
     }
 }
 
-@media screen and (min-width:440px) and (max-width: 490px)  {
+@media screen and (min-width:440px) and (max-width: 550px)  {
     .header__logo {
         margin-left: 27px;
         margin-top: 0;
@@ -325,7 +325,7 @@
     }
 }
 
-@media screen and (min-width:440px) and (max-width: 490px) {
+@media screen and (min-width:440px) and (max-width: 550px) {
     .elements{
         padding: 36px 19px 0 19px;
         width: calc(100% - 158px);
