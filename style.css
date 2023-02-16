@@ -176,11 +176,13 @@
     margin-left: 490px;
 }
 
+
 @media screen and (max-width:321px) and (max-width: 1280px) {
     .page {
         overflow-x: hidden;
     }
 }
+
 
 @media screen and (max-width:321px) and (max-width: 1280px) {
     .header {
@@ -195,6 +197,14 @@
 @media screen and (min-width:440px) and (max-width: 550px)  {
     .header {
         overflow: hidden;
+    }  
+}
+
+@media screen and (min-width:550px) and (max-width: 659px)  {
+    .header {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
     }  
 }
 
@@ -244,6 +254,12 @@
     }
 }
 
+@media screen and (min-width: 575px) and (max-width: 660px)  {
+    .header__line {
+        min-width: 320px;
+        max-height: 0;
+    }  
+}
 
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .avatar__wrapper {
@@ -344,6 +360,12 @@
     }
 }
 
+@media screen and (min-width: 575px) and (max-width: 660px)  {
+    .elements {
+        width: calc(100% - 300px);
+    }  
+}
+
 
 @media screen and (min-width:660px) and (max-width: 720px) {
     .elements{
@@ -371,6 +393,15 @@
     }
 }
 
+@media screen and (min-width: 575px) and (max-width: 660px)  {
+    .footer {
+        min-width: 282px;
+        min-height: 14px;
+        margin: 0;
+    }  
+}
+
+
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .footers{
         font-size: 14px;
@@ -378,4 +409,10 @@
         margin: -5px;
         margin-left: 0px;
     }
+}
+
+@media screen and (min-width: 575px) and (max-width: 660px)  {
+    .footers {
+        margin: 0;
+    }  
 }
