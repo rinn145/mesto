@@ -27,7 +27,7 @@
 }
 
 .header__line {
-    max-width: 880px;
+    min-width: 880px;
 
 }
 
@@ -193,7 +193,7 @@
     }
 }
 
-@media screen and (min-width:440px) and (max-width: 550px)  {
+@media screen and (min-width:342px) and (max-width: 550px)  {
     .header {
         overflow: hidden;
     }  
@@ -244,22 +244,19 @@
 }
 
 
-@media screen and (max-width:321px) and (max-width: 1280px) {
+
+@media screen and (min-width: 322px) and (max-width: 342px)  {
     .header__line {
         max-width: 320px;
-        padding: 0;
+    }  
+}
+
+@media screen and (max-width:321px) and (max-width: 1280px) {
+    .header__line {
         margin-top: 22.5px;
         margin-right: 4px;
     }
 }
-
-@media screen and (min-width: 575px) and (max-width: 660px)  {
-    .header__line {
-        min-width: 320px;
-        max-height: 0;
-    }  
-}
-
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .avatar__wrapper {
         margin: 0;
