@@ -176,6 +176,11 @@
     margin-left: 490px;
 }
 
+@media screen and (max-width:321px) and (max-width: 1280px) {
+    .page {
+        overflow-x: hidden;
+    }
+}
 
 @media screen and (max-width:321px) and (max-width: 1280px) {
     .header {
@@ -191,7 +196,6 @@
     .logo {
         min-width: 103.74px;
         min-height: 24.4px;
-        overflow: hidden;
     }
 }
 
