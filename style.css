@@ -196,6 +196,7 @@
 @media screen and (min-width:342px) and (max-width: 550px) {
     .header {
         overflow: hidden;
+        padding: 28px 0 0 0;
     }
 }
 
@@ -203,6 +204,7 @@
     .header {
         overflow-y: scroll;
         overflow-x: hidden;
+        padding: 28px 0 0 0;
 
     }
 }
@@ -210,12 +212,14 @@
 @media screen and (min-width:660px) and (max-width: 720px) {
     .header {
         overflow: hidden;
+        padding: 28px 0 0 0;
     }
 }
 
 @media screen and (min-width:721px) and (max-width: 880px) {
     .header {
         overflow: hidden;
+        padding: 28px 0 0 0;
     }
 }
 
