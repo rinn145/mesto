@@ -362,7 +362,7 @@
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .elements {
         padding: 36px 19px 0 19px;
-        width: calc(100% - 69px);
+        width: calc(100% - 40px);
     }
 }
 
@@ -378,15 +378,12 @@
         width: calc(100% - 432px);
     }
 }
+
 @media screen and (min-width: 570px) and (max-width: 666px) {
     .elements {
         width: calc(100% - 384px);
     }
 }
-
-
-
-
 
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .cards {
