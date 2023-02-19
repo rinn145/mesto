@@ -27,7 +27,7 @@
       <div class="profile__info">
         <div class="profile__wrapper">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__edit-button" type="button"></button>
+          <button class="profile__edit-butto" type="button"></button>
         </div>
         <p class="profile__subtitle">Исследователь океана</p>
       </div>
@@ -49,6 +49,27 @@
       <p class="footers">© 2020 Mesto Russia</p>
     </footer>
   </main>
+
+  <section class="popup">
+    <div class="popup__container">
+      <div class="popup__content">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form name="popup-profile-form" class="popup__input-list" novalidate>
+          <label class="popup__field">
+            <input id="name-input" name="userName" class="popup__input" type="text" placeholder="Имя" minlength="2" maxlength="40" required />
+            <span class="popup__input-error"></span>
+          </label>
+          <label class="popup__field">
+            <input id="about-input" name="userAbout" class="popup__input" type="text" placeholder="О себе" minlength="2" maxlength="200" required />
+            <span class="popup__input-error"></span>
+          </label>
+          <button class="popup__save-button popup__save-button_inactive" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <button class="popup__close"></button>
+    </section>
+
   <script src="script.js"></script>
 </body>
 
