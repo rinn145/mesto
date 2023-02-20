@@ -1,6 +1,6 @@
 .profile__add-button {
     display: flex;
-    background-image: url(.../../../images/AddButton.svg);
+    background-image: url(../../../images/AddButton.svg);
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: cover;

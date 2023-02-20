@@ -1,9 +1,7 @@
 .elements {
     padding-top: 50px;
     max-width: 880px;
-    min-height: 744px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 @media screen and (min-width:320px) and (max-width: 1280px) {
@@ -22,12 +20,12 @@
 
 @media screen and (min-width:660px) and (max-width: 720px) {
     .elements {
-        width: calc(100% - 432px);
+        width: calc(100% - 355px);
     }
 }
 
 @media screen and (min-width: 570px) and (max-width: 666px) {
     .elements {
-        width: calc(100% - 384px);
+        width: calc(100% - 290px);
     }
 }
