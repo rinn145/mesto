@@ -5,6 +5,7 @@
     list-style: none;
     margin: 0 auto;
     padding: 0;
+    justify-items: center;
 }
 
 @media screen and (min-width:320px) and (max-width: 1280px) {
