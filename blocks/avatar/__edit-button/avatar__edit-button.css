@@ -1,0 +1,17 @@
+.avatar__edit-button {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    height: 120px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+
+}
+
+.avatar__edit-button:hover {
+    transition: 3s;
+    opacity: .6;
+}
