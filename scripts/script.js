@@ -1,7 +1,13 @@
 const popup = document.querySelector(".popup");
 const buttonOpenEdit = document.querySelector(".profile__edit-button");
 const closeButton = popup.querySelector(".popup__close");
-const saveButton = popup.querySelector(".popup__save-button")
+const saveButton = popup.querySelector(".popup__save-button");
+const likeButton = document.querySelector(".like__image");
+
+
+const togglelLkeButton = function () {
+   likeButton.src = "./images/Union.svg";
+}
 
 const toggleOpenPopup = function () {
    popup.classList.toggle('popup_opened')
@@ -21,8 +27,10 @@ const toggleSavePopup = function () {
    popup.classList.toggle('popup_opened')
 }
 
+likeButton.addEventListener('click', togglelLkeButton )
 buttonOpenEdit.addEventListener('click', toggleOpenPopup);
 closeButton.addEventListener("click", toggleOpenPopup);
 saveButton.addEventListener("click", toggleSavePopup);
+
 
 

@@ -24,10 +24,15 @@
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/card/card.css);
+@import url(../blocks/card/__info/card__info.css);
+@import url(../blocks/card/__like/card__like.css);
+@import url(../blocks/card/__title/card__title.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footers/footers.css);
 
+@import url(../blocks/roshpit/roshpit.css);
+@import url(../blocks/like/__button/like__button.css);
 
 
 .popup {
@@ -46,7 +51,7 @@
     display: flex;
 }
 
-.popup__container {
+.popup__container { 
     display: flex;
     flex-direction: column;
     max-width: 430px;
@@ -55,6 +60,16 @@
     border-radius: 10px;
 }
 
+@media screen and (max-width: 320px) {
+    .popup__container { 
+        display: flex;
+        flex-direction: column;
+        max-width: 282px;
+        min-height: 320px;
+        background-color: #ffff;
+        border-radius: 10px;
+    }
+}
 
 .popup__close {
     background-image: url(../images/Close.svg);
@@ -71,9 +86,25 @@
 }
 
 
+@media screen and (max-width: 320px) and (max-widht:1280px){
+    .popup__close{ 
+        margin: 0;
+        margin-bottom: 109px;
+        margin-right: 1px;
+    }
+}
+
+
+
 .popup__content {
     padding: 34px 36px 0;
+}
 
+@media screen and (max-width: 320px) and (max-widht:1280px) {
+    .popup__content { 
+        max-width: 282px;
+        min-height: 320px;
+    }
 }
 
 .popup__title {
@@ -87,6 +118,13 @@
     line-height: 29px;
 }
 
+@media screen and (max-width: 320px) and (max-widht:1280px) {
+    .popup__title { 
+        min-width: 238px;
+        max-height: 22px;
+    }
+}
+
 .popup__input {
     margin-bottom: 30px;
     width: 358px;
@@ -95,6 +133,14 @@
     border-left: black;
     border-right: black;
 }
+
+@media screen and (max-width: 320px) and (max-widht:1280px) {
+    .popup__input { 
+        max-width: 238px;
+        min-height: 27px;
+    }
+}
+
 
 .popup__save-button {
     display: flex;
@@ -110,6 +156,13 @@
     color: #fff;
     cursor: pointer;
     background-color: #000;
+}
+
+@media screen and (max-width: 320px)  and (max-widht:1280px){
+    .popup__save-button { 
+        max-width: 238px;
+        min-height: 46px;
+    }
 }
 
 .popup__save-button:hover {
