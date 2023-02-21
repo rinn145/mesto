@@ -42,23 +42,7 @@
     justify-content: center;
 }
 
-
-
-/* .popup__opened {
-    display: flex;
-} */
-
-.popup__close {
-    background-image: url(../images/Close.svg);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: cover;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    margin: 0 8px 375px 4px;
+.popup_opened {
     display: flex;
 }
 
@@ -70,6 +54,22 @@
     background-color: #ffff;
     border-radius: 10px;
 }
+
+
+.popup__close {
+    background-image: url(../images/Close.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: border-box;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0 8px 375px 4px;
+    display: flex;
+}
+
 
 .popup__content {
     padding: 34px 36px 0;

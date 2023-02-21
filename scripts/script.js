@@ -1,27 +1,28 @@
-const aboutButton = document.querySelector(".popup__type_profile");
 const popup = document.querySelector(".popup");
+const buttonOpenEdit = document.querySelector(".profile__edit-button");
 const closeButton = popup.querySelector(".popup__close");
+const saveButton = popup.querySelector(".popup__save-button")
 
-const toggleOpenPopup = () => {
-    popup.classList.toggle("popup_opened");
+const toggleOpenPopup = function () {
+   popup.classList.toggle('popup_opened')
 };
 
-const handleAboutButtonClick = () => {
-    toggleOpenPopup();
-};
+let userName = document.querySelector("#name-input");
+let userAbout = document.querySelector("#about-input");
+let profileTitle = document.querySelector(".profile__title");
+let profileSubtitle = document.querySelector(".profile__subtitle")
 
-const handleCloseButtonClick = () => {
-    toggleOpenPopup();
-};
+userName.value = profileTitle.textContent;
+userAbout.value = profileSubtitle.textContent;
 
-const handleOverlyClick = (event) => {
-    if (event.target === event.currentTarget) {
-        toggleOpenPopup();
-    }
-};
+const toggleSavePopup = function () {
+   profileTitle.textContent = userName.value;
+   profileSubtitle.textContent = userAbout.value;
+   popup.classList.toggle('popup_opened')
+}
 
+buttonOpenEdit.addEventListener('click', toggleOpenPopup);
+closeButton.addEventListener("click", toggleOpenPopup);
+saveButton.addEventListener("click", toggleSavePopup);
 
-aboutButton.addEventListener("click", handleAboutButtonClick);
-closeButton.addEventListener("click", handleCloseButtonClick);
-popup.addEventListener("click", handleOverlyClick);
 
