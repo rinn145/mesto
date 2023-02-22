@@ -1,11 +1,7 @@
 .footers {
-    max-width: 318px;
-    min-height: 18px;
     border-bottom: rgba(84, 84, 84, .7);
     position: relative;
-    display: flex;
-    margin: 0;
-    margin-left: 490px;
+    margin: 3px;
 }
 
 @media screen and (min-width: 100px) and (max-width:319px) {

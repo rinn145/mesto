@@ -4,4 +4,9 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+    background-image: url(../../../images/like.svg);
+    background-repeat: no-repeat;
+    min-width: 22px;
+    min-height: 19px;
+    color: black;
 }
