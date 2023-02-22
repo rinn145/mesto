@@ -1,4 +1,4 @@
-.avatar_button {
+.profile__avatar-edit-button{
     background: transparent;
     border: none;
     border-radius: 50%;
@@ -11,7 +11,7 @@
 
 }
 
-.avatar_button:hover {
+.profile__avatar-edit-button:hover {
     transition: 3s;
     opacity: .6;
 }
