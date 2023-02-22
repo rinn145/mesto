@@ -1,11 +1,11 @@
-.avatar__wrapper {
+.avatar_wrapper {
     align-items: center;
     display: flex;
     margin-right: 30px;
 }
 
 @media screen and (min-width:320px) and (max-width: 1280px) {
-    .avatar__wrapper {
+    .avatar_wrapper {
         margin: 0;
     }
 }
