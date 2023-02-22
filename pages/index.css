@@ -19,7 +19,7 @@
 
 @import url(../blocks/avatar/_info/avatar_info.css);
 @import url(../blocks/avatar/avatar-wrapper.css);
-@import url(../blocks/avatar/_button/avatar_button.css);
+@import url(../blocks/avatar/__button-edit-user/avatar__button-edit-user.css);
 
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/cards/cards.css);
