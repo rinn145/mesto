@@ -19,6 +19,25 @@
     opacity: .6;
 }
 
+
+@media screen and (min-width:100px) and (max-width: 319px) {
+    .profile__add-button {
+        background-image: url(../../../images/VectorPlus.svg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        height: 50px;
+        margin: 0 auto;
+        padding: 0;
+        width: 282px;
+    }
+}
+
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .profile__add-button {
         background-image: url(../../../images/VectorPlus.svg);
