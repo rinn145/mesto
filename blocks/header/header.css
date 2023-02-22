@@ -16,7 +16,7 @@
     }
 }
 
-@media screen and (min-width:342px) and (max-width: 550px) {
+@media screen and (min-width:328px) and (max-width: 550px) {
     .header {
         overflow: hidden;
         padding: 28px 0 0 0;
@@ -28,7 +28,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         padding: 28px 0 0 0;
-
+        
     }
 }
 

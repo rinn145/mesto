@@ -10,11 +10,12 @@
 
 @media screen and (min-width:100px) and (max-width: 319px) {
     .profile {
-        max-width: 282px;
-        min-height: 286px;
+        max-width: 200px;
+        height: 286px;
         padding: 42px 19px 0;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 }
 

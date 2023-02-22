@@ -10,6 +10,7 @@
     text-rendering: optimizeLegibility;
 }
 
+
 @media screen and (max-width:321px) and (max-width: 1280px) {
     .page {
         overflow-x: hidden;

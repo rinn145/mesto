@@ -8,6 +8,14 @@
     margin-left: 490px;
 }
 
+@media screen and (min-width: 100px) and (max-width:319px) {
+    .footers {
+        padding-left: 20px;
+        margin: 0;
+    }
+}
+
+
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .footers {
         font-size: 14px;
