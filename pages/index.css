@@ -19,7 +19,7 @@
 
 @import url(../blocks/avatar/_info/avatar_info.css);
 @import url(../blocks/avatar/avatar_wrapper.css);
-@import url(../blocks/avatar/_edit-button/avatar_edit-button.css);
+@import url(../blocks/avatar/avatar-edit__button/avatar-edit__button.css);
 
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/cards/cards.css);
@@ -33,9 +33,9 @@
 
 @import url(../blocks/main/main.css);
 @import url(../blocks/roshpit/roshpit.css);
-@import url(../blocks/like/_button/like_button.css);
+@import url(../blocks/like-button/like-button.css);
 
-@import url(../blocks/close/_wrapper/close_wrapper.css);
+@import url(../blocks/close-wrapper/close-wrapper.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_section/popup_section.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
