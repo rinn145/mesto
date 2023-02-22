@@ -33,7 +33,7 @@
 
 @import url(../blocks/main/main.css);
 @import url(../blocks/roshpit/roshpit.css);
-@import url(../blocks/like-button/like-button.css);
+@import url(../blocks/upload-button/__like/upload-button__like.css);
 
 @import url(../blocks/close-wrapper/close-wrapper.css);
 @import url(../blocks/popup/popup.css);
