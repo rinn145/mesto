@@ -1,4 +1,4 @@
-.avatar__user-edit__button {
+.avatar__user-edit_button {
     background: transparent;
     border: none;
     border-radius: 50%;
@@ -11,7 +11,7 @@
 
 }
 
-.avatar__user-edit__button:hover {
+.avatar__user-edit_button:hover {
     transition: 3s;
     opacity: .6;
 }
