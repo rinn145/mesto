@@ -41,7 +41,7 @@
             <div>
               <img class="roshpit" src="./images/roshpit.jpg" alt="рошпит">
             </div>
-
+            
             <div class="card__info">
               <div class="card__title">рошпит</div>
               <div class="card__like"><button class="card__edit-like-button"></button></div>
@@ -117,21 +117,13 @@
   </main>
 
   <section class="popup popup_section">
-    <div class="popup__container">
+    <div class="popup__wrapper">
       <div class="popup__content">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form name="popup-profile-form" class="popup__input-list" novalidate>
-          <label class="popup__field">
-            <input id="name-input" name="userName" value="" class="popup__input" type="text" placeholder="Имя"
-              minlength="2" maxlength="40" required />
-            <span class="popup__input-error"></span>
-          </label>
-          <label class="popup__field">
-            <input id="about-input" name="userAbout" value="" class="popup__input" type="text" placeholder="О себе"
-              minlength="2" maxlength="200" required />
-            <span class="popup__input-error"></span>
-          </label>
-          <button class="popup__save-button" type="button">Сохранить</button>
+        <form name="popup__profile-form">
+            <input id="name-input" name="userName" value="" class="popup__input popup__name" type="text" placeholder="Имя">
+            <input id="about-input" name="userAbout" value="" class="popup__input popup__about" type="text" placeholder="О себе">
+          <button class="popup__save-button" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
@@ -139,7 +131,9 @@
       <button class="popup__close"></button>
     </div>
   </section>
+
   <script src="./scripts/script.js"></script>
 </body>
 
 </html>
+
