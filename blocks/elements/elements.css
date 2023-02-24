@@ -4,6 +4,12 @@
     margin: 0 auto;
 }
 
+@media screen and (min-width: 10px) and (max-width:99px) {
+    .elements {   
+        width: calc(100% - 60px);  
+    }
+}
+
 @media screen and (min-width: 100px) and (max-width:319px) {
     .elements {
         
