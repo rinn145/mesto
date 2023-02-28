@@ -13,6 +13,13 @@
     box-sizing: border-box;
 }
 
+@media screen and (min-width:10px) and (max-width: 99px) {
+    .profile__title  {
+        font-size: 27px;
+        line-height: 33px;
+        padding-bottom: 10px;
+    }
+}
 @media screen and (min-width:320px) and (max-width: 1280px) {
     .profile__title {
         min-width: 189px;
@@ -22,6 +29,7 @@
         padding: 0;
     }
 }
+
 
 @media screen and (min-width:100px) and (max-width: 319px) {
     .profile__title  {

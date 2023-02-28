@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 10px) and (max-width: 99px) {
     .profile {
-        padding: 42px 3px 0;
+        padding: 42px 28px 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;

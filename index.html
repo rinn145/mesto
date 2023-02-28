@@ -35,82 +35,64 @@
     </section>
 
     <section class="elements">
-      <ul class="cards">
-        <li>
-          <div class="card">
-            <div>
-              <img class="roshpit" src="./images/roshpit.jpg" alt="рошпит">
-            </div>
-            
-            <div class="card__info">
-              <div class="card__title">рошпит</div>
-              <div class="card__like"><button class="card__edit-like-button"></button></div>
-            </div>
+      <div class="cards">
+        <div class="card">
+          <div>
+            <img class="roshpit" src="./images/roshpit.jpg" alt="рошпит">
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <div>
-              <img class="roshpit" src="./images/Lina.jpg" alt="Лина">
-            </div>
+          <div class="card__info">
+            <div class="card__title">рошпит</div>
+            <div class="card__like"><button class="card__edit-like-button"></button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="roshpit" src="./images/Lina.jpg" alt="Лина">
+          </div>
+          <div class="card__info">
+            <div class="card__title">Lina</div>
+            <div class="card__like"><button class="card__edit-like-button"></button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="roshpit" src="./images/ShadoFiend.jpg" alt="Невермор">
+          </div>
+          <div class="card__info">
+            <div class="card__title">Shadow Fiend</div>
+            <div class="card__like"><button class="card__edit-like-button"></button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="roshpit" src="./images/DrowRanger.jpg" alt="Лесной воин">
+          </div>
 
-            <div class="card__info">
-              <div class="card__title">Lina</div>
-              <div class="card__like"><button class="card__edit-like-button"></button></div>
-            </div>
+          <div class="card__info">
+            <div class="card__title">Drow Ranger</div>
+            <div class="card__like"><button class="card__edit-like-button"></button></div>
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <div>
-              <img class="roshpit" src="./images/ShadoFiend.jpg" alt="Невермор">
-            </div>
-
-            <div class="card__info">
-              <div class="card__title">Shadow Fiend</div>
-              <div class="card__like"><button class="card__edit-like-button"></button></div>
-            </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="roshpit" src="./images/invoker.jpg" alt="чудной волшебник">
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <div>
-              <img class="roshpit" src="./images/DrowRanger.jpg" alt="Лесной воин">
-            </div>
-
-            <div class="card__info">
-              <div class="card__title">Drow Ranger</div>
-              <div class="card__like"><button class="card__edit-like-button"></button></div>
-            </div>
+          <div class="card__info">
+            <div class="card__title">Invoker</div>
+            <div class="card__like"><button class="card__edit-like-button"></button></div>
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <div>
-              <img class="roshpit" src="./images/invoker.jpg" alt="чудной волшебник">
-            </div>
-
-            <div class="card__info">
-              <div class="card__title">Invoker</div>
-              <div class="card__like"><button class="card__edit-like-button"></button></div>
-            </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="roshpit" src="./images/ShtormSpirit.jpg" alt="дух шторма">
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <div>
-              <img class="roshpit" src="./images/ShtormSpirit.jpg" alt="дух шторма">
-            </div>
-
-            <div class="card__info">
-              <div class="card__title">Storm Spirit</div>
-              <div class="card__like"><button class="card__edit-like-button"></button></div>
-            </div>
+          <div class="card__info">
+            <div class="card__title">Storm Spirit</div>
+            <div class="card__like"><button class="card__edit-like-button"></button></div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
-
     <footer class="footer">
       <p class="footers">© 2020 Mesto Russia</p>
     </footer>
@@ -120,9 +102,11 @@
     <div class="popup__wrapper">
       <div class="popup__content">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form name="popup__profile-form">
-            <input id="name-input" name="userName" value="" class="popup__input popup__name" type="text" placeholder="Имя">
-            <input id="about-input" name="userAbout" value="" class="popup__input popup__about" type="text" placeholder="О себе">
+        <form>
+          <input id="name-input" name="userName" value="" class="popup__input popup__name" type="text"
+            placeholder="Имя">
+          <input id="about-input" name="userAbout" value="" class="popup__input popup__about" type="text"
+            placeholder="О себе">
           <button class="popup__save-button" type="submit">Сохранить</button>
         </form>
       </div>
@@ -135,4 +119,3 @@
 </body>
 
 </html>
-

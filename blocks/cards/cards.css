@@ -2,10 +2,15 @@
     display: grid;
     gap: 20px 17px;
     grid-template-columns: repeat(auto-fit,282px);
-    list-style: none;
     margin: 0 auto;
     padding: 0;
     justify-items: center;
+}
+@media screen and (min-width: 10px) and (max-width:99px) {
+    .cards {
+        justify-items: center;
+        
+    }
 }
 
 
