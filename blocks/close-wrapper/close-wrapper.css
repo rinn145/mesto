@@ -1,9 +1,11 @@
 .close-wrapper {
     width: 430px;
     display: flex;
-    justify-content: flex-end;
     padding-left: 69px;
     padding-bottom: 19px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 @media screen and (min-width: 320px) and (max-width:1280px) {
@@ -12,7 +14,6 @@
         margin: 0;
         padding: 0;
         padding-right: 35px;
-        padding-bottom: 15px;
-
+        padding-bottom: 16px;
     }
 }

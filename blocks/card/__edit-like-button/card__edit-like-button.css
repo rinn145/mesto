@@ -10,3 +10,7 @@
     min-height: 19px;
     color: black;
 }
+
+.card__edit-like-button:hover{
+    opacity: .7;
+}
