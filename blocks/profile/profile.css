@@ -8,32 +8,22 @@
     display: flex;
 }
 
-@media screen and (min-width: 10px) and (max-width: 99px) {
-    .profile {
-        padding: 42px 28px 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
 
-
-@media screen and (min-width:100px) and (max-width: 319px) {
-    .profile {
-        padding: 42px 19px 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-
-@media screen and (min-width:320px) and (max-width: 1280px) {
+@media screen and (min-width:319px) and (max-width: 1280px) {
     .profile {
         max-width: 282px;
         min-height: 286px;
         padding: 38px 19px 0;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 222px) {
+    .profile {
+        padding: 42px 16px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

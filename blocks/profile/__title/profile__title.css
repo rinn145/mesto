@@ -14,8 +14,9 @@
     box-sizing: border-box;
 }
 
-@media screenand  and (min-width:10px) and (max-width: 99px) and (min-width:100px) and (max-width: 319px) {
-    .profile__title  {
+
+@media screen and (min-width:10px) and (max-width: 99px) {
+    .profile__title {
         font-size: 27px;
         line-height: 33px;
         padding-bottom: 10px;
@@ -29,7 +30,13 @@
         font-size: 27px;
         line-height: 33px;
         padding: 0;
-        margin-bottom: 2px;
-        margin-top: 26px;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width: 319px) {
+    .profile__title {
+        font-size: 27px;
+        line-height: 33px;
+        padding-bottom: 10px;
     }
 }
