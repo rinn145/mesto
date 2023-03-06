@@ -1,4 +1,8 @@
 .profile__title {
+    min-width: 294px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;   
     display: flex;
     margin: 0;
     margin-bottom: 8px;
@@ -8,10 +12,6 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 48px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 294px;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
