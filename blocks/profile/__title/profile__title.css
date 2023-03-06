@@ -1,8 +1,7 @@
 .profile__title {
-    min-width: 294px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;   
+    overflow: hidden;
     display: flex;
     margin: 0;
     margin-bottom: 8px;
