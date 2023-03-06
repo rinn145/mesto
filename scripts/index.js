@@ -14,6 +14,10 @@ const toggleOpenPopup = function () {
    popup.classList.toggle('popup_opened')
 };
 
+const  toggleClosePopup = function () {
+   popup.classList.toggle('popup_opened')
+};
+
 
 function handleFormSubmit (evt) {
    evt.preventDefault();
@@ -24,5 +28,5 @@ function handleFormSubmit (evt) {
 
 
 buttonOpenEdit.addEventListener('click', toggleOpenPopup);
-closeButton.addEventListener("click", toggleOpenPopup);
+closeButton.addEventListener("click", toggleClosePopup);
 formElement.addEventListener('submit', handleFormSubmit); 

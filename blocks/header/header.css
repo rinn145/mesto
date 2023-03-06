@@ -4,7 +4,7 @@
     min-height: 74px;
     margin: 0 auto;
     position: relative;
-    border-bottom: 1px solid #545454;
+    border-bottom: 1px solid rgb(84,84,84);
 }
 
 @media screen and (max-width:320px) and (max-width: 1280px) {
@@ -16,7 +16,7 @@
     }
 }
 
-@media screen and (min-width:321px) and (max-width: 350px)  and (min-width:551px) and (max-width: 659px) and (min-width:660px) and (max-width: 720px) and (min-width:721px) and (max-width: 880px) {
+@media screen and (min-width:321px) and (max-width: 350px)  {
     .header {
         padding: 28px 0 0 0;
     }
