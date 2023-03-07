@@ -1,5 +1,4 @@
 .profile__subtitle {
-    display: flex;
     flex-direction: column;
     font-family: "Inter", "Arial ", sans-serif;
     font-style: normal;

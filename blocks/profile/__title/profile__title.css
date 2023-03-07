@@ -1,8 +1,7 @@
-.profile__title {
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.profile__title {   
     overflow: hidden;
-    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin: 0;
     margin-bottom: 8px;
     margin-top: 23px;
