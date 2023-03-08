@@ -24,6 +24,8 @@
 
 @media screen and (min-width: 320px) and (max-width:1279px)  {
     .popup__save-button {
+        margin-bottom: 25px;
+        padding: 0;
         width: 238px;
         height: 46px;
         font-size: 14px;
