@@ -8,11 +8,10 @@
     border: none;
     padding: 0;
     display: flex;
-    position: relative;
-    left: 240px;
-    bottom: 10px;
+    position: absolute;
+    right: -40px;
+    top: -29px;
 }
-
 
 .popup__close:hover {
     opacity: 0.8;
@@ -26,6 +25,6 @@
         height: 20px;
         padding: 0;
         margin-bottom: 8px;
-        left: 125px;
+        right: 125px;
     }
 }

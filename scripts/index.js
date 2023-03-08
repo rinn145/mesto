@@ -23,7 +23,7 @@ function handleFormSubmit (evt) {
    evt.preventDefault();
    profileTitle.textContent = userName.value;
    profileSubtitle.textContent = userAbout.value;
-   toggleOpenPopup();
+   toggleClosePopup();
 }
 
 

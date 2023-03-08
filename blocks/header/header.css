@@ -4,7 +4,7 @@
     min-height: 74px;
     margin: 0 auto;
     position: relative;
-    border-bottom: 1px solid rgb(84,84,84);
+    border-bottom: 1px solid rgba(84, 84, 84, 1);
 }
 
 @media screen and (max-width:320px) and (max-width: 1279px) {
