@@ -42,9 +42,6 @@ closeButton.addEventListener("click", toggleClosePopup);
 closeAddButton.addEventListener("click", toggleAddClose);
 formElement.addEventListener('submit', handleFormSubmit); 
 
-const cards = document.querySelector('.cards');
-const cardTemplate = document.querySelector('.card-template').content;
-
 const initialCards =  [
   {
     name: 'Архыз',
@@ -72,12 +69,25 @@ const initialCards =  [
   }
 ];
 
-initialCards.forEach(function (element) {
-  const directorElement = cardTemplate.cloneNode(true);
 
-  directorElement.querySelector('.directors__name').textContent = element.name;
-  directorElement.querySelector('.directors__films').href = element.link;
-
-  cards.append(directorElement)
-})
+// initialCards.forEach = function() {
+// //   let form = document.querySelector(".elements");
+// //   let addElem = (text, src) => {
+// //       let div = document.createElement('div');
+// //       let h2 = document.createElement("h2");
+// //       let img = document.createElement('img');
+// //       let button = document.createElement('button');
+// //       img.src = src;
+// //       div.append(img);
+// //       h2.textContent = text;
+// //       div.append(h2);
+// //       return div;
+// //   }
+// //   form.onsubmit = () => {
+// //       let name = document.querySelector("#name");
+// //               let image = document.querySelector("#image");
+// //               document.body.append(addElem(name.value, image.value));
+// //               return true;
+// //   }
+// // }
 

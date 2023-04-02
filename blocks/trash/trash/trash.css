@@ -1,0 +1,9 @@
+.trash {
+    right: -248px;
+    bottom: 347px;
+    position: relative;
+}
+
+.trash:hover {
+    opacity: 0.3;
+}
