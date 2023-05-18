@@ -74,9 +74,8 @@ const initialCards =  [
 ];
 
 
-const placesContainer = document.querySelector(".elements");
+const placesContainer = document.querySelector(".cards");
 const placeTemplate = document.querySelector(".cards__template").content;
-const grid = document.querySelector(".cards");
 
 const placeInfo = initialCards.map(function (item) {
   return {
