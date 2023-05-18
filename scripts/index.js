@@ -66,28 +66,36 @@ const initialCards =  [
   {
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://virtus-img.cdnvideo.ru/images/as-is/plain/b0/b081f035d3f1d7c36a2b2192874f3c0d.jpg@jpg'
   }
 ];
 
 
-// initialCards.forEach = function() {
-// //   let form = document.querySelector(".elements");
-// //   let addElem = (text, src) => {
-// //       let div = document.createElement('div');
-// //       let h2 = document.createElement("h2");
-// //       let img = document.createElement('img');
-// //       let button = document.createElement('button');
-// //       img.src = src;
-// //       div.append(img);
-// //       h2.textContent = text;
-// //       div.append(h2);
-// //       return div;
-// //   }
-// //   form.onsubmit = () => {
-// //       let name = document.querySelector("#name");
-// //               let image = document.querySelector("#image");
-// //               document.body.append(addElem(name.value, image.value));
-// //               return true;
-// //   }
-// // }
+const placesContainer = document.querySelector(".elements");
+const placeTemplate = document.querySelector(".cards__template").content;
+const grid = document.querySelector(".cards");
 
+const placeInfo = initialCards.map(function (item) {
+  return {
+    name: item.name,
+    link: item.link
+  };
+});
+
+function render() {
+  placeInfo.forEach(renderCard);
+}
+
+function renderCard({ name, link }) {
+  const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
+  placeElement.querySelector(".card__title").textContent = name;
+  placeElement.querySelector(".card__images").src = link;
+
+  placesContainer.prepend(placeElement);
+
+}
+
+render();
