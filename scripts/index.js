@@ -108,4 +108,14 @@ likeButton.forEach(heart => {
   }) 
 });   
 
+const trashButton = document.querySelectorAll(".trash");
+trashButton.forEach((elem)=>{
+  elem.addEventListener('click',removeParent);
+});
+function removeParent(){
+    let revDiv = this.parentElement;
+    revDiv.remove();
+}
+
+
 
