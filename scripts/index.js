@@ -33,8 +33,9 @@ function handleFormSubmit (evt) {
   evt.preventDefault();
   profileTitle.textContent = userName.value;
   profileSubtitle.textContent = userAbout.value;
-  toggleClosePopup();
-}
+  toggleClosePopup()
+};
+
 
 buttonAdd.addEventListener('click', toggleAddPopup);
 buttonOpenEdit.addEventListener('click', toggleOpenPopup);
@@ -68,7 +69,7 @@ const initialCards =  [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   },
   {
-    name: 'Байкал',
+    name: 'Энигма',
     link: 'https://virtus-img.cdnvideo.ru/images/as-is/plain/b0/b081f035d3f1d7c36a2b2192874f3c0d.jpg@jpg'
   }
 ];
@@ -98,3 +99,13 @@ function renderCard({ name, link }) {
 }
 
 render();
+
+
+const likeButton = document.querySelectorAll(".card__edit-like-button");
+likeButton.forEach(heart => { 
+  heart.addEventListener('click', () => { 
+     heart.classList.toggle('card__darck-like-button');
+  }) 
+});   
+
+
