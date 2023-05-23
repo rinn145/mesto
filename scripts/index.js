@@ -13,6 +13,8 @@ let profileSubtitle = document.querySelector('.profile__subtitle')
 let formElement = document.querySelector('.popup__form');
 let formElementAdd = document.querySelector('.popup__form-Add');
 
+// let cardTitle = document.querySelector('card__title');
+// let cardImages = document.querySelector('card__images');
 
 const toggleOpenPopup = function () {
    userName.value = profileTitle.textContent;
@@ -40,13 +42,25 @@ const toggleAddClose = function () {
    popupAdd.classList.toggle('popup_opened');
 };
 
+const newCard =[
+  {
+    name: '',
+    link: ''
+  },
+]
+
+
+let cardTitle  = namesCards.value;
+let cardImages = urlCards.value;
+
 function handleFormSubmitAdd (evt) {
   evt.preventDefault();
-  namesCards.textContent = namesCards.value;
-  urlCards.textContent = urlCards.value;
-  render( placeInfo);
-  toggleAddPopup()
+  newCard[0].name  = namesCards.value;
+  newCard[0].link = urlCards.value;
+  renderCard(newCard[0]);
+  toggleAddClose();
 };
+
 
 
 
@@ -92,6 +106,8 @@ const initialCards =  [
 
 const placesContainer = document.querySelector(".cards");
 const placeTemplate = document.querySelector(".cards__template").content;
+let likeButton = document.querySelectorAll(".card__edit-like-button");
+let trashButton = document.querySelectorAll(".trash");
 
 const placeInfo = initialCards.map(function (item) {
   return {
@@ -110,25 +126,25 @@ function renderCard({ name, link }) {
   placeElement.querySelector(".card__images").src = link;
 
   placesContainer.prepend(placeElement);
+  likeButton = document.querySelectorAll(".card__edit-like-button");
+  likeButton.forEach((heart) => { 
+    heart.addEventListener('click', likeCards) 
+  });  
+  trashButton = document.querySelectorAll(".trash");
+  trashButton.forEach((elem)=>{
+    elem.addEventListener('click', removeParent);
+  });
 
 }
 
 render();
 
-
-const likeButton = document.querySelectorAll(".card__edit-like-button");
-likeButton.forEach(heart => { 
-  heart.addEventListener('click', () => { 
-     heart.classList.toggle('card__darck-like-button');
-  }) 
-});   
-
-const trashButton = document.querySelectorAll(".trash");
-trashButton.forEach((elem)=>{
-  elem.addEventListener('click',removeParent);
-});
 function removeParent(){
     let revDiv = this.parentElement;
     revDiv.remove();
 }
 
+function likeCards(){
+  let revlike = this;
+  revlike.classList.toggle('card__darck-like-button');
+}
