@@ -13,8 +13,6 @@ let profileSubtitle = document.querySelector('.profile__subtitle')
 let formElement = document.querySelector('.popup__form');
 let formElementAdd = document.querySelector('.popup__form-Add');
 
-// let cardTitle = document.querySelector('card__title');
-// let cardImages = document.querySelector('card__images');
 
 const toggleOpenPopup = function () {
    userName.value = profileTitle.textContent;
@@ -61,6 +59,11 @@ function handleFormSubmitAdd (evt) {
   toggleAddClose();
 };
 
+let placeholderImages = document.querySelector('.popup__images');
+let openImaes =  placeholderImages.querySelector('.popup__open-images');
+function clickImages(){
+  
+}
 
 
 
@@ -96,16 +99,12 @@ const initialCards =  [
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   },
-  {
-    name: 'Энигма',
-    link: 'https://virtus-img.cdnvideo.ru/images/as-is/plain/b0/b081f035d3f1d7c36a2b2192874f3c0d.jpg@jpg'
-  }
 ];
 
 
 
-const placesContainer = document.querySelector(".cards");
-const placeTemplate = document.querySelector(".cards__template").content;
+const cardsContainer = document.querySelector(".cards");
+const cardsTemplate = document.querySelector(".cards__template").content;
 let likeButton = document.querySelectorAll(".card__edit-like-button");
 let trashButton = document.querySelectorAll(".trash");
 
@@ -121,30 +120,30 @@ function render() {
 }
 
 function renderCard({ name, link }) {
-  const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
-  placeElement.querySelector(".card__title").textContent = name;
-  placeElement.querySelector(".card__images").src = link;
+  const cardElement = cardsTemplate.querySelector(".card").cloneNode(true);
+  cardElement.querySelector(".card__title").textContent = name;
+  cardElement.querySelector(".card__images").src = link;
 
-  placesContainer.prepend(placeElement);
+  cardsContainer.prepend(cardElement);
   likeButton = document.querySelectorAll(".card__edit-like-button");
   likeButton.forEach((heart) => { 
     heart.addEventListener('click', likeCards) 
   });  
   trashButton = document.querySelectorAll(".trash");
   trashButton.forEach((elem)=>{
-    elem.addEventListener('click', removeParent);
+    elem.addEventListener('click', deliteParent);
   });
 
 }
 
 render();
 
-function removeParent(){
-    let revDiv = this.parentElement;
-    revDiv.remove();
+function deliteParent(){
+    let delite = this.parentElement;
+    delite.remove();
 }
 
 function likeCards(){
-  let revlike = this;
-  revlike.classList.toggle('card__darck-like-button');
+  let like = this;
+  like.classList.toggle('card__darck-like-button');
 }
