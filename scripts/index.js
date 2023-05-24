@@ -57,14 +57,7 @@ function handleFormSubmitAdd (evt) {
   newCard[0].link = urlCards.value;
   renderCard(newCard[0]);
   toggleAddClose();
-};
-
-let placeholderImages = document.querySelector('.popup__images');
-let openImaes =  placeholderImages.querySelector('.popup__open-images');
-function clickImages(){
-  
 }
-
 
 
 buttonAdd.addEventListener('click', toggleAddPopup);
