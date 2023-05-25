@@ -7,11 +7,11 @@
     cursor: pointer;
     border: none;
     padding: 0;
-    position: fixed;
-    right: 261px;
-    top: 128px;
-}
+    position: relative;
+    left: 4px;
+    bottom: 545px;
 
+}
 .popup__close-images:hover {
     opacity: 0.8;
 }
