@@ -42,20 +42,67 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__form/-Add/popup__form-Add.css);
 
-.popup__images {
+.popup__container-images {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .popup__open-images {
+    align-items: center;
     max-width: 75vw;
     max-height: 75vh;
 }
+
+.popup__opened-images {
+    display: none;
+}
+
+.popup__title-images {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    
+}
+
+.popup__close-images {
+    background-image: url(../../../images/Close.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    display: flex;
+    position: relative;
+    left: 447px;
+    bottom: 20px;
+}
+
+.popup__close-images:hover {
+    opacity: 0.8;
+}
+
+
+@media screen and (min-width: 320px) and (max-width:1279px) {
+    .popup__close-images {
+        background-image: url(../../../images/Close2.svg);
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin-bottom: 8px;
+        right: -2px;
+    }
+}
+
+

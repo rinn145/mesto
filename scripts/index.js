@@ -67,7 +67,7 @@ closeAddButton.addEventListener("click", toggleAddClose);
 formElement.addEventListener('submit', handleFormSubmit); 
 formElementAdd.addEventListener('submit', handleFormSubmitAdd); 
 
-const initialCards =  [
+const initialCards = [
   {
     name: 'Архыз',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -91,7 +91,7 @@ const initialCards =  [
   {
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  },
+  }
 ];
 
 
@@ -100,6 +100,7 @@ const cardsContainer = document.querySelector(".cards");
 const cardsTemplate = document.querySelector(".cards__template").content;
 let likeButton = document.querySelectorAll(".card__edit-like-button");
 let trashButton = document.querySelectorAll(".trash");
+
 
 const placeInfo = initialCards.map(function (item) {
   return {
@@ -116,8 +117,8 @@ function renderCard({ name, link }) {
   const cardElement = cardsTemplate.querySelector(".card").cloneNode(true);
   cardElement.querySelector(".card__title").textContent = name;
   cardElement.querySelector(".card__images").src = link;
-
   cardsContainer.prepend(cardElement);
+
   likeButton = document.querySelectorAll(".card__edit-like-button");
   likeButton.forEach((heart) => { 
     heart.addEventListener('click', likeCards) 
@@ -126,7 +127,10 @@ function renderCard({ name, link }) {
   trashButton.forEach((elem)=>{
     elem.addEventListener('click', deliteParent);
   });
-
+  imageButton = document.querySelectorAll(".card__images");
+  imageButton.forEach((elem)=>{
+    elem.addEventListener('click', imageOpen);
+  });
 }
 
 render();
@@ -140,3 +144,26 @@ function likeCards(){
   let like = this;
   like.classList.toggle('card__darck-like-button');
 }
+
+let popupss = document.querySelector('.popupss');
+let imageClossButton = popupss.querySelector('.popup__close-images');
+let popupssImages = popupss.querySelector('.popup__open-images');
+
+let popupssTitle = popupss.querySelector('.popup__title-images');
+
+function imageOpen(){
+  let open = this.parentElement;
+  let omg = open.querySelector(".card__title").textContent;
+  let amg = open.querySelector(".card__images").src;
+  popupssImages.src = amg;
+  popupssTitle.textContent = omg;
+  popupss.classList.toggle('popup__opened-images');
+}
+
+
+
+const toggleImageClose = function () {
+  popupss.classList.toggle('popup__opened-images');
+};
+
+imageClossButton.addEventListener("click", toggleImageClose);
