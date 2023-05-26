@@ -96,8 +96,9 @@ const initialCards = [
 
 
 
-const cardsContainer = document.querySelector(".cards__template");
-const cardsTemplate = document.querySelector(".cards").content;
+const cardsContainer = document.querySelector(".cards");
+const cardsTemplate = document.querySelector(".cards__template").content;
+console.log(cardsTemplate);
 let likeButton = document.querySelectorAll(".card__edit-like-button");
 let trashButton = document.querySelectorAll(".trash");
 
