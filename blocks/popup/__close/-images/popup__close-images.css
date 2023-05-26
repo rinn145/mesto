@@ -7,8 +7,8 @@
     cursor: pointer;
     border: none;
     padding: 0;
-    position: relative;
-    left: 4px;
+    position: absolute;
+    left: -4px;
     bottom: 545px;
 
 }

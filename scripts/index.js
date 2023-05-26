@@ -145,25 +145,25 @@ function likeCards(){
   like.classList.toggle('card__darck-like-button');
 }
 
-let popupsImage = document.querySelector('.popups_image');
-let imageClossButton = popupsImage.querySelector('.popup__close-images');
-let popupsImages = popupsImage.querySelector('.popup__open-images');
+let popupImage = document.querySelector('.popup_image');
+let imageClossButton = popupImage.querySelector('.popup__close-images');
+let popupImages = popupImage.querySelector('.popup__open-images');
 
-let popupsTitle = popupsImage.querySelector('.popup__title-images');
+let popupTitle = popupImage.querySelector('.popup__title-images');
 
 function imageOpen(){
   let open = this.parentElement;
   let omg = open.querySelector(".card__title").textContent;
   let amg = open.querySelector(".card__images").src;
-  popupsImages.src = amg;
-  popupsTitle.textContent = omg;
-  popupsImage.classList.toggle('popup__opened-images');
+  popupImages.src = amg;
+  popupTitle.textContent = omg;
+  popupImage.classList.toggle('popup__opened-images');
 }
 
 
 
 const toggleImageClose = function () {
-  popupsImage.classList.toggle('popup__opened-images');
+  popupImage.classList.toggle('popup__opened-images');
 };
 
 imageClossButton.addEventListener("click", toggleImageClose);

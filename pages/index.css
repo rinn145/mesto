@@ -42,15 +42,10 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__form/-Add/popup__form-Add.css);
 
-@import url(../blocks/popup/_image/popups_image.css);
+@import url(../blocks/popup/_image/popup_image.css);
 @import url(../blocks/popup/__container/-images/popup__container-images.css);
 @import url(../blocks/popup/__open/-images/popup__open-images.css);
 @import url(../blocks/popup/__opened/-images/popup__opened-images.css);
 @import url(../blocks/popup/__title/-images/popup__title-images.css);
 @import url(../blocks/popup/__close/-images/popup__close-images.css);
 
-
-.popup__wrapper {
-    margin: 0;
-    padding: 0;
-}
