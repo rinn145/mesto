@@ -11,7 +11,7 @@ let urlCards = document.querySelector('#url-input');
 let profileTitle = document.querySelector('.profile__title');
 let profileSubtitle = document.querySelector('.profile__subtitle')
 let formElement = document.querySelector('.popup__form');
-let formElementAdd = document.querySelector('.popup__form-Add');
+let formElementAdd = document.querySelector('.popup-add__form');
 
 
 const toggleOpenPopup = function () {
