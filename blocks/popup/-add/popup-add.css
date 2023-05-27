@@ -1,4 +1,4 @@
-.popup-add_container {
+.popup-add {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
 }
 
 
-.popup-add:hover .popup-add_container {
+.popup-add:hover .popup__container {
     display: block;
     animation: fade-in 1s;
 }
