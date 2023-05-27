@@ -17,7 +17,7 @@ let formElementAdd = document.querySelector('.popup-add__form');
 const toggleOpenPopup = function () {
    userName.value = profileTitle.textContent;
    userAbout.value = profileSubtitle.textContent;
-   popup.classList.toggle('popup_opened')
+   popup.classList.toggle('popup_opened');
 };
 
 const toggleClosePopup = function () {
@@ -37,7 +37,7 @@ const toggleAddPopup = function () {
 };
 
 const toggleAddClose = function () {
-   popupAdd.classList.toggle('popup-add_opened');
+   popupAdd.classList.toggle('popup-add_close');
 };
 
 const newCard =[
