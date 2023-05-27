@@ -12,7 +12,7 @@
 }
 
 
-.popup-add:hover .popup__container-add {
+.popup-add:hover .popup_container-add {
     display: block;
     animation: fade-in 1s;
 }
