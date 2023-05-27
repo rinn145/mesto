@@ -147,7 +147,7 @@ function likeCards(){
 
 let popupImage = document.querySelector('.popup-image');
 let imageClossButton = popupImage.querySelector('.popup__close-images');
-let popupImages = popupImage.querySelector('.popup__open-images');
+let popupImages = popupImage.querySelector('.popup-image__open-images');
 
 let popupTitle = popupImage.querySelector('.popup__title-images');
 
