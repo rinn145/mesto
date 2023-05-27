@@ -4,14 +4,14 @@ const popupAdd = document.querySelector('.popup-add');
 const buttonAdd = document.querySelector('.profile__add-button');
 const closeButton = popup.querySelector('.popup__close');
 const closeAddButton = popupAdd.querySelector('.popup-add__close');
-let userName = document.querySelector('#name-input');
-let userAbout = document.querySelector('#about-input');
-let namesCards = document.querySelector('#namesCards-input');
-let urlCards = document.querySelector('#url-input');
-let profileTitle = document.querySelector('.profile__title');
-let profileSubtitle = document.querySelector('.profile__subtitle')
-let formElement = document.querySelector('.popup__form');
-let formElementAdd = document.querySelector('.popup-add__form');
+const userName = document.querySelector('#name-input');
+const userAbout = document.querySelector('#about-input');
+const namesCards = document.querySelector('#namesCards-input');
+const urlCards = document.querySelector('#url-input');
+const profileTitle = document.querySelector('.profile__title');
+const profileSubtitle = document.querySelector('.profile__subtitle')
+const formElement = document.querySelector('.popup__form');
+const formElementAdd = document.querySelector('.popup-add__form');
 
 
 const toggleOpenPopup = function () {
