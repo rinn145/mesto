@@ -145,7 +145,7 @@ function likeCards(){
   like.classList.toggle('card__darck-like-button');
 }
 
-let popupImage = document.querySelector('.popup_image');
+let popupImage = document.querySelector('.popup-image');
 let imageClossButton = popupImage.querySelector('.popup__close-images');
 let popupImages = popupImage.querySelector('.popup__open-images');
 
