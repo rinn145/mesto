@@ -157,13 +157,13 @@ function imageOpen(){
   let amg = open.querySelector(".card__images").src;
   popupImages.src = amg;
   popupTitle.textContent = omg;
-  popupImage.classList.toggle('popup-image__opened-images');
+  popupImage.classList.toggle('popup-image_opened-images');
 }
 
 
 
 const toggleImageClose = function () {
-  popupImage.classList.toggle('popup-image__opened-images');
+  popupImage.classList.toggle('popup-image_opened-images');
 };
 
 imageClossButton.addEventListener("click", toggleImageClose);
