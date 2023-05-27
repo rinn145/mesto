@@ -33,11 +33,11 @@ function handleFormSubmit (evt) {
 };
 
 const toggleAddPopup = function () {
-  popupAdd.classList.toggle('popup_opened')
+  popupAdd.classList.toggle('popup-add__opened')
 };
 
 const toggleAddClose = function () {
-   popupAdd.classList.toggle('popup_opened');
+   popupAdd.classList.toggle('popup-add__opened');
 };
 
 const newCard =[
