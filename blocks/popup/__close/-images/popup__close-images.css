@@ -8,9 +8,8 @@
     border: none;
     padding: 0;
     position: absolute;
-    left: -4px;
-    bottom: 545px;
-
+    right: 414px;
+    bottom: 835px;
 }
 .popup__close-images:hover {
     opacity: 0.8;
