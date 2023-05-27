@@ -1,4 +1,4 @@
-.popup_container-add {
+.popup__add-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (min-width: 320px) and (max-width:1279px) {
-    .popup_container-add {
+    .popup__add-container {
         width: 282px;
     }
 }
