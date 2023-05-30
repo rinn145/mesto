@@ -36,7 +36,7 @@ function handleFormSubmitAdd (evt) {
   newCard[0].link = urlCards.value;
   namesCards.value = "";
   urlCards.value = "";
-  renderCard(newCard[0]);
+  createCard(newCard[0]);
   closeOrOpenAnyPopup(popupAdd);
 
 }
