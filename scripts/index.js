@@ -13,7 +13,6 @@ const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle')
 const formElement = document.querySelector('.popup__form');
 const popupCloseAdd = popupAdd.querySelector('.popup__close');
-console.log(popupCloseAdd);
 
 
 // редактирование профиля
@@ -59,9 +58,8 @@ function handleFormEditProfile(evt) {
 };
 
 
-function closeOrOpenAnyPopup (popupAdd) {
- console.log(popupAdd);
- popupAdd.classList.toggle('popup_closed');
+function closeOrOpenAnyPopup (popup) {
+ popup.classList.toggle('popup_closed');
 };
 
 buttonOpenEdit.addEventListener('click', toggleOpenPopup );
@@ -152,7 +150,7 @@ function addListner () {
 
 
 function deliteParent(){
-    const delite = this.parentElement;
+    const delite = this.closest('.card');
     delite.remove();
 }
 
@@ -167,7 +165,7 @@ const imageClossButton = popupImage.querySelector('.popup__close');
 const popupImages = popupImage.querySelector('.popup__open');
 
 const popupTitle = popupImage.querySelector('.popup-image__title-images');
-console.log(popupTitle);
+
 
 function imageOpen(){
   const open = this.parentElement;
