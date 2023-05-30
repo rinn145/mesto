@@ -163,10 +163,11 @@ function likeCards(){
 }
 
 const popupImage = document.querySelector('.popup-image');
-const imageClossButton = popupImage.querySelector('.popup-image__close-images');
-const popupImages = popupImage.querySelector('.popup-image__open-images');
+const imageClossButton = popupImage.querySelector('.popup__close');
+const popupImages = popupImage.querySelector('.popup__open');
 
 const popupTitle = popupImage.querySelector('.popup-image__title-images');
+console.log(popupTitle);
 
 function imageOpen(){
   const open = this.parentElement;
@@ -179,5 +180,5 @@ function imageOpen(){
 
 
 
-// imageClossButton.addEventListener("click", closeOrOpenAnyPopup(popupImage));
+imageClossButton.addEventListener("click", function() {closeOrOpenAnyPopup(popupImage)});
 
