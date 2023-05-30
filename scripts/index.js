@@ -107,8 +107,7 @@ const initialCards = [
 
 const cardsContainer = document.querySelector(".cards");
 const cardsTemplate = document.querySelector(".cards__template").content;
-let likeButton = document.querySelectorAll(".card__edit-like-button");
-let trashsButton = document.querySelectorAll(".trash");
+
 
 
 const placeInfo = initialCards.map(function (item) {
@@ -119,42 +118,33 @@ const placeInfo = initialCards.map(function (item) {
 });
 
 function render() {
-  placeInfo.forEach(renderCard);
+  placeInfo.forEach(createCard);
 }
 
-function renderCard({ name, link }) {
+function createCard ({ name, link }) {
   const cardElement = cardsTemplate.querySelector(".card").cloneNode(true);
+  const likeButton = cardElement.querySelector('.card__edit-like-button');
+  const deleteButton = cardElement.querySelector('.trash');
+  const cardImage = cardElement.querySelector('.card__images');
+
   cardElement.querySelector(".card__title").textContent = name;
   cardElement.querySelector(".card__images").src = link;
+
+
+  likeButton.addEventListener('click', handleLikeIcon);
+  deleteButton.addEventListener('click', handleDeleteCard);
+  cardImage.addEventListener('click',  handlePreviewPicture);
   cardsContainer.prepend(cardElement);
-  addListner();
-}
+};
 
 render();
 
-
-function addListner () {
-  likeButton = document.querySelectorAll(".card__edit-like-button");
-  likeButton.forEach((heart) => { 
-    heart.addEventListener('click', likeCards) 
-  });  
-  trashsButton = document.querySelectorAll(".trash");
-  trashsButton.forEach((elem)=>{
-    elem.addEventListener('click', deliteParent);
-  });
-  imageButton = document.querySelectorAll(".card__images");
-  imageButton.forEach((elem)=>{
-    elem.addEventListener('click', imageOpen);
-  });
-};
-
-
-function deliteParent(){
+function handleDeleteCard(){
     const delite = this.closest('.card');
     delite.remove();
 }
 
-function likeCards(){
+function handleLikeIcon(){
   const like = this;
   like.classList.toggle('card__darck-like-button');
 }
@@ -167,7 +157,7 @@ const popupImages = popupImage.querySelector('.popup__open');
 const popupTitle = popupImage.querySelector('.popup-image__title-images');
 
 
-function imageOpen(){
+function handlePreviewPicture(){
   const open = this.parentElement;
   const omg = open.querySelector(".card__title").textContent;
   const amg = open.querySelector(".card__images").src;
