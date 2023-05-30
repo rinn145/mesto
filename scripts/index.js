@@ -20,24 +20,6 @@ console.log(popupCloseAdd);
 
 
 
-
-
-function addListner () {
-  likeButton = document.querySelectorAll(".card__edit-like-button");
-  likeButton.forEach((heart) => { 
-    heart.addEventListener('click', likeCards) 
-  });  
-  trashsButton = document.querySelectorAll(".trash");
-  trashsButton.forEach((elem)=>{
-    elem.addEventListener('click', deliteParent);
-  });
-  imageButton = document.querySelectorAll(".card__images");
-  imageButton.forEach((elem)=>{
-    elem.addEventListener('click', imageOpen);
-  });
-};
-
-
 const newCard =[
   {
     name: '',
@@ -152,6 +134,23 @@ function renderCard({ name, link }) {
 
 render();
 
+
+function addListner () {
+  likeButton = document.querySelectorAll(".card__edit-like-button");
+  likeButton.forEach((heart) => { 
+    heart.addEventListener('click', likeCards) 
+  });  
+  trashsButton = document.querySelectorAll(".trash");
+  trashsButton.forEach((elem)=>{
+    elem.addEventListener('click', deliteParent);
+  });
+  imageButton = document.querySelectorAll(".card__images");
+  imageButton.forEach((elem)=>{
+    elem.addEventListener('click', imageOpen);
+  });
+};
+
+
 function deliteParent(){
     const delite = this.parentElement;
     delite.remove();
@@ -161,6 +160,7 @@ function likeCards(){
   const like = this;
   like.classList.toggle('card__darck-like-button');
 }
+
 
 const popupImage = document.querySelector('.popup-image');
 const imageClossButton = popupImage.querySelector('.popup__close');
