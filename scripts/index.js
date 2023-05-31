@@ -2,7 +2,7 @@ const editProfile = document.querySelector('.popup-edit');
 const buttonOpenEdit = document.querySelector('.profile__edit-button');
 const buttonOpenAdd = document.querySelector('.profile__add-button');
 const popupAdd = document.querySelector('.popup-add');
-const popupFormAdd = popupAdd.querySelector('.popup__form')
+const formPopupAdd = popupAdd.querySelector('.popup__form')
 const closeEditProfile = editProfile.querySelector('.popup__close');
 const userName = document.querySelector('#name-input');
 const userAbout = document.querySelector('#about-input');
@@ -10,7 +10,7 @@ const namesCards = document.querySelector('#namesCards-input');
 const urlCards = document.querySelector('#url-input');
 const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle')
-const formElementEditProfile = document.querySelector('.popup__form');
+const formPopupEdit = document.querySelector('.popup__form');
 const popupCloseAdd = popupAdd.querySelector('.popup__close');
 
 
@@ -47,9 +47,9 @@ function closeOrOpenAnyPopup (popup) {
 buttonOpenEdit.addEventListener('click', openPopupProfile );
 closeEditProfile.addEventListener('click' , function() {closeOrOpenAnyPopup(editProfile)});
 popupCloseAdd.addEventListener('click' , function() {closeOrOpenAnyPopup(popupAdd)});
-formElementEditProfile.addEventListener('submit', handleFormEditProfile); 
+formPopupEdit.addEventListener('submit', handleFormEditProfile); 
 buttonOpenAdd.addEventListener('click', function() {closeOrOpenAnyPopup(popupAdd)});
-popupFormAdd.addEventListener('submit', handleFormSubmitAdd);
+formPopupAdd.addEventListener('submit', handleFormSubmitAdd);
 
 
 
@@ -113,7 +113,7 @@ function createCard ({ name, link }) {
 
   cardElement.querySelector(".card__title").textContent = name;
   cardElement.querySelector(".card__images").src = link;
-
+  cardElement.querySelector(".card__images").alt = name;
 
   likeButton.addEventListener('click', handleLikeIcon);
   deleteButton.addEventListener('click', handleDeleteCard);
@@ -137,8 +137,6 @@ function handleFormSubmitAdd (evt) {
   renderCard(newCard[0]);
   closeOrOpenAnyPopup(popupAdd);
 }
-
-// render();
 
 
 function handleDeleteCard(){
@@ -165,6 +163,7 @@ function handlePreviewPicture(){
   const amg = open.querySelector(".card__images").src;
   photoPopupImage.src = amg;
   titlePopupImage.textContent = omg;
+  photoPopupImage.alt = omg;
   closeOrOpenAnyPopup(popupImage);
 }
 
