@@ -39,10 +39,35 @@
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__form/popup__form.css);
-
-
-
 @import url(../blocks/popup/-image/__open/-images/popup-image__open-images.css);
 @import url(../blocks/popup/-image/__title/-images/popup-image__title-images.css);
 @import url(../blocks/popup/__wrapper/popup__wrapper.css);
+
+.button_inactive {
+    color: #B8B8B8;
+    background: #EDEDED;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+.popup-form__set {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup__input-error {
+    font-size: 12px;
+    color: red;
+    top: calc(100% + 10px);
+    left: 0;
+    transition: 0.3s;
+    margin-bottom: 30px;
+  }
+
+.popup__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 

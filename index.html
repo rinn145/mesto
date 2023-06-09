@@ -15,7 +15,7 @@
   </header>
   <main class="main">
     <section class="profile">
-        <img src="./images/Avatar.png" alt="аватар" class="profile__avatar">
+      <img src="./images/Avatar.png" alt="аватар" class="profile__avatar">
       <div class="profile__info">
         <div class="profile__wrapper">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -29,10 +29,10 @@
     <section class="elements">
       <div class="cards">
 
-     </div>
-  
-</section>
-</main>
+      </div>
+
+    </section>
+  </main>
 
   <footer class="footer">
     <p class="footer__title">© 2020 Mesto Russia</p>
@@ -40,50 +40,71 @@
 
   <div class="popup popup-edit popup_closed">
     <div class="popup__container">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="form">
-          <input id="name-input" name="name" value="" class="popup__input" type="text" placeholder="Имя">
-          <input id="about-input" name="about" value="" class="popup__input" type="text" placeholder="О себе">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form" name="form">
+        <fieldset class="popup-form__set">
+          <label class="popup__field">
+            <input id="name-input" name="name" value="" class="popup__input popup-text-placeholder" type="text"
+              mainlength="2" maxlength="40" required>
+            <span class="popup__input-error name-input-error"></span>
+          </label>
+          <label class="popup__field">
+            <input id="about-input" name="about" value="" class="popup__input popup-text-placeholder" type="text"
+              placeholder="О себе" mainlength="2" maxlength="200" required>
+            <span class="popup__input-error about-input-error"></span>
+          </label>
           <button class="popup__save-button" type="submit">Сохранить</button>
-        </form>
-        <button class="popup__close" type="button"></button>
+        </fieldset>
+      </form>
+      <button class="popup__close" type="button"></button>
     </div>
   </div>
 
   <div class="popup popup-add popup_closed">
     <div class="popup__container">
-        <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form" name="form">
-          <input id="namesCards-input" name="name" value="" class="popup__input" type="text" placeholder="Название" required>
-          <input id="url-input" name="link" value="" class="popup__input" type="url" placeholder="ссылка на картинку" required>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form" name="form">
+        <fieldset class="popup-form__set">
+          <label class="popup__field">
+            <input id="namesCards-input" name="name" value="" class="popup__input" type="text" placeholder="Название"
+              mainlength="2" maxlength="30" required>
+            <span class="popup__input-error namesCards-input-error"></span>
+          </label>
+          <label class="popup__field">
+            <input id="url-input" name="link" value="" class="popup__input" type="url" placeholder="ссылка на картинку"
+              required>
+            <span class="popup__input-error url-input-error"></span>
+          </label>
           <button class="popup__save-button" type="submit">Создать</button>
-        </form>
-        <button class="popup__close" type="button"></button>
+        </fieldset>
+      </form>
+      <button class="popup__close" type="button"></button>
     </div>
   </div>
 
-<div class="popup popup-image popup_closed">
-      <div clas="popup__container">
-        <div class="popup__wrapper">
+  <div class="popup popup-image popup_closed">
+    <div clas="popup__container">
+      <div class="popup__wrapper">
         <img src="#" alt="" value="" class="popup__open">
         <button class="popup__close" type="button"></button>
-        <h4 class="popup-image__title-images"></h4> 
+        <h4 class="popup-image__title-images"></h4>
       </div>
     </div>
-</div>
-
-<template class="cards__template">
-  <div class="card">
-    <img class="card__images" alt="">
-    <div class="card__info">
-      <h2 class="card__title"></h2>
-      <button class="card__edit-like-button" type="button"></button>
-    </div>
-    <img class="trash" src="./images/Group.png">
   </div>
-</template>
+
+  <template class="cards__template">
+    <div class="card">
+      <img class="card__images" alt="">
+      <div class="card__info">
+        <h2 class="card__title"></h2>
+        <button class="card__edit-like-button" type="button"></button>
+      </div>
+      <img class="trash" src="./images/Group.png">
+    </div>
+  </template>
 
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 
 </html>

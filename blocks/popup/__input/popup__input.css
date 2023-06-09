@@ -1,5 +1,5 @@
 .popup__input {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     line-height: 17px;
     font-size: 14px;
     width: 358px;
@@ -14,4 +14,7 @@
         height: 14px;
         margin-bottom: 45px;
     }
+}
+.popup__input:invalid {
+    border-color: red;
 }

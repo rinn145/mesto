@@ -1,3 +1,4 @@
+const anyPopup = document.querySelector('.popup');
 const editProfile = document.querySelector('.popup-edit');
 const buttonOpenEdit = document.querySelector('.profile__edit-button');
 const buttonOpenAdd = document.querySelector('.profile__add-button');
@@ -172,3 +173,11 @@ function handlePreviewPicture(){
 imageClossButton.addEventListener("click", function() {closeOrOpenAnyPopup(popupImage)});
 
 renderCard();
+
+editProfile.addEventListener("click", (evt) => {
+  if (evt.currentTarget === evt.target) {
+    closeOrOpenAnyPopup(editProfile);
+  }
+})
+
+anyPopup.addEventListener('click' , function() {closeOrOpenAnyPopup(anyPopup)})
