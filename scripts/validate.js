@@ -21,7 +21,7 @@ const checkInputValidity = (formElement, inputElement) => {
 };
 
 
-function setEventListeners(formElement){
+function setEventListeners(formElement) {
   const inputList = Array.from(formElement.querySelectorAll('.popup__input'));
   const buttonElement = formElement.querySelector('.popup__save-button');
   toggleButtonState(inputList, buttonElement);
@@ -37,23 +37,25 @@ function setEventListeners(formElement){
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll('.popup__form'));
   formList.forEach((formElement) => {
-  formElement.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-  });
+    formElement.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+    });
     setEventListeners(formElement);
-});
+  });
 }
 
 enableValidation();
 
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {
-  return !inputElement.validity.valid;
-})};
+    return !inputElement.validity.valid;
+  })
+};
 
-function toggleButtonState  (inputList , buttonElement) {
+function toggleButtonState(inputList, buttonElement) {
   if (hasInvalidInput(inputList)) {
-  buttonElement.classList.add('button_inactive');
-} else {
-  buttonElement.classList.remove('button_inactive');
-}}
+    buttonElement.classList.add('popup-button_inactive');
+  } else {
+    buttonElement.classList.remove('popup-button_inactive');
+  }
+}
