@@ -1,4 +1,4 @@
-const anyPopup = document.querySelector('.popup');
+const popupContainer = document.querySelector('.popup__container');
 const editProfile = document.querySelector('.popup-edit');
 const buttonOpenEdit = document.querySelector('.profile__edit-button');
 const buttonOpenAdd = document.querySelector('.profile__add-button');
@@ -14,6 +14,15 @@ const profileSubtitle = document.querySelector('.profile__subtitle')
 const formPopupEdit = document.querySelector('.popup__form');
 const popupCloseAdd = popupAdd.querySelector('.popup__close');
 
+const anyPopup = document.querySelector('.popup');
+anyPopup.addEventListener('click', (evt) => {
+  console.log(anyPopup)
+  const click = evt.composedPath().includes('.popup');
+  if (!click ) {
+    anyPopup.computedStyleMap.display = 'none';
+  }
+})
+
 
 const newCard = [
   {
@@ -21,10 +30,6 @@ const newCard = [
     link: ''
   },
 ]
-
-
-
-
 
 function openPopupProfile() {
   userName.value = profileTitle.textContent;
@@ -51,11 +56,6 @@ popupCloseAdd.addEventListener('click', function () { closeOrOpenAnyPopup(popupA
 formPopupEdit.addEventListener('submit', handleFormEditProfile);
 buttonOpenAdd.addEventListener('click', function () { closeOrOpenAnyPopup(popupAdd) });
 formPopupAdd.addEventListener('submit', handleFormSubmitAdd);
-
-
-
-
-
 
 
 const initialCards = [
@@ -155,6 +155,8 @@ const popupImage = document.querySelector('.popup-image');
 const imageClossButton = popupImage.querySelector('.popup__close');
 const photoPopupImage = popupImage.querySelector('.popup__open');
 const titlePopupImage = popupImage.querySelector('.popup-image__title-images');
+
+
 
 
 
