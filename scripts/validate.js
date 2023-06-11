@@ -59,3 +59,4 @@ function toggleButtonState(inputList, buttonElement) {
     buttonElement.classList.remove('popup-button_inactive');
   }
 }
+
