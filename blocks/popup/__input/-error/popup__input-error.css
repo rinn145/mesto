@@ -4,5 +4,6 @@
     top: calc(100% + 10px);
     left: 0;
     transition: 0.3s;
-    margin-bottom: 30px;
+    max-width: 300px;
+    min-height: 30px;
 }

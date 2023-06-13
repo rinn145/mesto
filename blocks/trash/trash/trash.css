@@ -2,6 +2,7 @@
     right: -248px;
     bottom: 347px;
     position: relative;
+    cursor: pointer;
 }
 
 .trash:hover {
