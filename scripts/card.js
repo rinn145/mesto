@@ -135,4 +135,5 @@ function handleFormSubmitAdd(evt) {
 
     closeAnyPopup(popupAdd);
 }
+
 formPopupAdd.addEventListener('submit', handleFormSubmitAdd);
