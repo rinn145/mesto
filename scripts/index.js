@@ -12,7 +12,6 @@ const formPopupEdit = document.querySelector('.popup__form');
 const popupCloseAdd = popupAdd.querySelector('.popup__close');
 const allPopups = document.querySelectorAll('.popup');
 
-
 const closePopupByOverlayClick = evt => {
   if (evt.target.classList.contains('popup')) {
     closeAnyPopup(evt.currentTarget);
@@ -29,7 +28,7 @@ const closePopupByEsc = evt => {
 
 allPopups.forEach (elem => elem.addEventListener('click' , closePopupByOverlayClick));
 
-function exitNoPopup(props) {
+export function exitNoPopup(props) {
     const openPopup = props.querySelector('.popup__container');
     const click = event.composedPath().includes(openPopup);
     if (!click ) {
@@ -38,14 +37,14 @@ function exitNoPopup(props) {
 }
 
 
-export function openPopupProfile() {
+function openPopupProfile() {
   userName.value = profileTitle.textContent;
   userAbout.value = profileSubtitle.textContent;
   openAnyPopup(editProfile);
 };
 
 
-export function handleFormEditProfile(evt) {
+function handleFormEditProfile(evt) {
   evt.preventDefault();
   profileTitle.textContent = userName.value;
   profileSubtitle.textContent = userAbout.value;

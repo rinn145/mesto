@@ -1,5 +1,6 @@
-import {openAnyPopup} from './index.js';
-import {closeAnyPopup} from './index.js';
+import { openAnyPopup } from './index.js';
+import { closeAnyPopup } from './index.js';
+
 
 
 export default class Card {
@@ -21,7 +22,7 @@ export default class Card {
         const likeButton = this._element.querySelector('.card__edit-like-button');
         const deleteButton = this._element.querySelector('.trash');
         const cardImage = this._element.querySelector('.card__images');
-
+        const popupImage = document.querySelector('.popup-image');
 
         likeButton.addEventListener('click', () => {
             this._handleLikeIcon();
@@ -58,6 +59,7 @@ export default class Card {
     }
 
 
+
     createCard() {
         this._element = this._getTemplate();
         const likeButton = this._element.querySelector('.card__edit-like-button');
@@ -80,30 +82,30 @@ const cardsTemplate = ".cards__template";
 
 const initialCards = [
     {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
     },
     {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
     },
     {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
     },
     {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
     },
     {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
     },
     {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
-  ];
+];
 
 initialCards.forEach((item) => {
     const card = new Card(item, cardsTemplate);
