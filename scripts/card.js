@@ -22,7 +22,6 @@ export default class Card {
         const likeButton = this._element.querySelector('.card__edit-like-button');
         const deleteButton = this._element.querySelector('.trash');
         const cardImage = this._element.querySelector('.card__images');
-        const popupImage = document.querySelector('.popup-image');
 
         likeButton.addEventListener('click', () => {
             this._handleLikeIcon();
@@ -35,6 +34,7 @@ export default class Card {
         cardImage.addEventListener('click', () => {
             this._handlePreviewPicture();
         });
+
     }
 
     _handleLikeIcon() {
@@ -48,16 +48,18 @@ export default class Card {
 
     _handlePreviewPicture() {
         const popupImage = document.querySelector('.popup-image');
+        const imageClossButton = popupImage.querySelector('.popup__close');
         const photoPopupImage = popupImage.querySelector('.popup__open');
         const titlePopupImage = popupImage.querySelector('.popup-image__title-images');
 
-
+        imageClossButton.addEventListener("click", function () { closeAnyPopup(popupImage)});
         photoPopupImage.src = this._link;
         titlePopupImage.textContent = this._name;
         photoPopupImage.alt = this._name;
         openAnyPopup(popupImage);
+        
     }
-
+        
 
 
     createCard() {
