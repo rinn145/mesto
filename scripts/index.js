@@ -28,7 +28,7 @@ const closePopupByEsc = evt => {
 
 allPopups.forEach (elem => elem.addEventListener('click' , closePopupByOverlayClick));
 
-export function exitNoPopup(props) {
+ function exitNoPopup(props) {
     const openPopup = props.querySelector('.popup__container');
     const click = event.composedPath().includes(openPopup);
     if (!click ) {
@@ -37,14 +37,13 @@ export function exitNoPopup(props) {
 }
 
 
-function openPopupProfile() {
+ function openPopupProfile() {
   userName.value = profileTitle.textContent;
   userAbout.value = profileSubtitle.textContent;
   openAnyPopup(editProfile);
 };
 
-
-function handleFormEditProfile(evt) {
+ function handleFormEditProfile(evt) {
   evt.preventDefault();
   profileTitle.textContent = userName.value;
   profileSubtitle.textContent = userAbout.value;
