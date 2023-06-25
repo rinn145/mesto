@@ -18,13 +18,12 @@ const closePopupByOverlayClick = evt => {
  }
 }
 
-
 const closePopupByEsc = evt => {
-  const openPopup = document.querySelector('.popup_closed')
-  if(event.key == "Escape"){ 
-    closeAnyPopup(openPopup);
-  }
-}
+  if(evt.key == "Escape"){
+  const openPopup = document.querySelector('.popup_closed');
+  closeAnyPopup(openPopup);
+   }
+ }
 
 allPopups.forEach (elem => elem.addEventListener('click' , closePopupByOverlayClick));
 
@@ -35,7 +34,6 @@ allPopups.forEach (elem => elem.addEventListener('click' , closePopupByOverlayCl
       props.classList.remove('popup_closed');
     }
 }
-
 
  function openPopupProfile() {
   userName.value = profileTitle.textContent;

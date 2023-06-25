@@ -37,6 +37,7 @@ class FormValidator {
   _disableSubmitButton() {
     this._submitButtonElement.classList.add(this._inactiveButtonClass);
     this._submitButtonElement.disabled = true;
+
   }
 
   _enableSubmitButton() {
@@ -70,14 +71,25 @@ class FormValidator {
   }
 }
 
-const formList = document.querySelectorAll('.popup__form');
-formList.forEach((formElement) => {
-  const formValidator = new FormValidator({
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__save-button',
-    inactiveButtonClass: 'popup-button_inactive',
-    inputErrorClass: '.popup__input-error',
-    popupValid: 'popup_input-invalid'
-  }, formElement);
-  formValidator.enableValidation();
-});
+const form1 = document.querySelector('.popup__form');
+const popupAdd = document.querySelector('.popup-add');
+const form2 = popupAdd.querySelector('.popup__form');
+
+const formValidator1 = new FormValidator({
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save-button',
+  inactiveButtonClass: 'popup-button_inactive',
+  inputErrorClass: '.popup__input-error',
+  popupValid: 'popup_input-invalid'
+}, form1);
+
+const formValidator2 = new FormValidator({
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save-button',
+  inactiveButtonClass: 'popup-button_inactive',
+  inputErrorClass: '.popup__input-error',
+  popupValid: 'popup_input-invalid'
+}, form2);
+
+formValidator1.enableValidation();
+formValidator2.enableValidation();
