@@ -51,7 +51,7 @@ allPopups.forEach (elem => elem.addEventListener('click' , closePopupByOverlayCl
 
 export function openAnyPopup(popup) {
   popup.classList.add('popup_closed');
-  document.addEventListener('keydown', closePopupByEsc)
+  document.addEventListener('keydown', closePopupByEsc);
 };
 
 export function closeAnyPopup(popup) {
@@ -63,4 +63,4 @@ buttonOpenEdit.addEventListener('click', openPopupProfile);
 closeEditProfile.addEventListener('click', function () { closeAnyPopup(editProfile) });
 popupCloseAdd.addEventListener('click', function () { closeAnyPopup(popupAdd) });
 formPopupEdit.addEventListener('submit', handleFormEditProfile);
-buttonOpenAdd.addEventListener('click', function () { openAnyPopup(popupAdd) });
+buttonOpenAdd.addEventListener('click', function () { openAnyPopup(popupAdd)});

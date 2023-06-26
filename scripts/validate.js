@@ -71,9 +71,8 @@ class FormValidator {
   }
 }
 
+
 const form1 = document.querySelector('.popup__form');
-const popupAdd = document.querySelector('.popup-add');
-const form2 = popupAdd.querySelector('.popup__form');
 
 const formValidator1 = new FormValidator({
   inputSelector: '.popup__input',
@@ -83,6 +82,8 @@ const formValidator1 = new FormValidator({
   popupValid: 'popup_input-invalid'
 }, form1);
 
+const popupAdd = document.querySelector('.popup-add');
+const form2 = popupAdd.querySelector('.popup__form');
 const formValidator2 = new FormValidator({
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save-button',
@@ -90,6 +91,7 @@ const formValidator2 = new FormValidator({
   inputErrorClass: '.popup__input-error',
   popupValid: 'popup_input-invalid'
 }, form2);
+
 
 formValidator1.enableValidation();
 formValidator2.enableValidation();

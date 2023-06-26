@@ -26,7 +26,10 @@ export default class Card {
         this._likeButton = this._element.querySelector('.card__edit-like-button');
         this._deleteButton = this._element.querySelector('.trash');
         this._cardImage = this._element.querySelector('.card__images');
-        this._imageClossButton.addEventListener("click", () => { closeAnyPopup(this._popupImage) });
+        
+        this._imageClossButton.addEventListener("click", () => { 
+            this._handleClosePicture();   
+         });
 
         this._likeButton.addEventListener('click', () => {
             this._handleLikeIcon();
@@ -57,7 +60,9 @@ export default class Card {
         openAnyPopup(this._popupImage);
     }
 
-
+    _handleClosePicture() {
+        closeAnyPopup(this._popupImage);
+    }
 
     createCard() {
         this._element = this._getTemplate();
@@ -103,9 +108,10 @@ const initialCards = [
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
 ];
-
-
-function handleFormSubmitAdd(evt) {
+const popupAdd = document.querySelector('.popup-add');
+const formPopupAdd = popupAdd.querySelector('.popup__form');
+const popupSaveButton = popupAdd.querySelector('.popup__save-button');
+function handleFormSubmitAdd(evt)  {
     evt.preventDefault();
     const newCard = {
         name: namesCards.value,
@@ -114,6 +120,8 @@ function handleFormSubmitAdd(evt) {
     
     evt.target.reset();
 
+    popupSaveButton.classList.add('popup-button_inactive');
+    popupSaveButton.disabled = true;
 
     const cardElement = createCard(newCard);
     cardsContainer.prepend(cardElement);
@@ -126,8 +134,7 @@ initialCards.forEach((item) => {
     cardsContainer.prepend(cardElement);
 });
 
-const popupAdd = document.querySelector('.popup-add');
-const formPopupAdd = popupAdd.querySelector('.popup__form')
+
 
 const urlCards = document.querySelector('#url-input');
 const namesCards = document.querySelector('#namesCards-input');
