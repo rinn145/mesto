@@ -11,6 +11,9 @@ const profileSubtitle = document.querySelector('.profile__subtitle')
 const formPopupEdit = document.querySelector('.popup__form');
 const popupCloseAdd = popupAdd.querySelector('.popup__close');
 const allPopups = document.querySelectorAll('.popup');
+const popupImage = document.querySelector('.popup-image');
+const popupCloseImage = popupImage.querySelector('.popup__close');
+
 
 const closePopupByOverlayClick = evt => {
   if (evt.target.classList.contains('popup')) {
@@ -49,18 +52,28 @@ allPopups.forEach (elem => elem.addEventListener('click' , closePopupByOverlayCl
 };
 
 
+
 export function openAnyPopup(popup) {
   popup.classList.add('popup_closed');
   document.addEventListener('keydown', closePopupByEsc);
-};
+
+}
 
 export function closeAnyPopup(popup) {
   popup.classList.remove('popup_closed');
-  document.removeEventListener('keydown', closePopupByEsc)
-};
+  document.removeEventListener('keydown', closePopupByEsc);
+}
+
+function createCard(item) {
+  const card = new Card(item, cardsTemplate, closeAnyPopup);
+  const cardElement = card.createCard();
+  return cardElement
+}
+
 
 buttonOpenEdit.addEventListener('click', openPopupProfile);
 closeEditProfile.addEventListener('click', function () { closeAnyPopup(editProfile) });
 popupCloseAdd.addEventListener('click', function () { closeAnyPopup(popupAdd) });
 formPopupEdit.addEventListener('submit', handleFormEditProfile);
 buttonOpenAdd.addEventListener('click', function () { openAnyPopup(popupAdd)});
+popupCloseImage.addEventListener('click', function() { closeAnyPopup(popupImage)});

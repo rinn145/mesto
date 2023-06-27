@@ -1,3 +1,6 @@
+import { closeAnyPopup } from './index.js';
+import { openAnyPopup } from './index.js';
+
 class FormValidator {
   constructor(config, formElement) {
     this._formElement = formElement;
@@ -35,13 +38,13 @@ class FormValidator {
   }
 
   _disableSubmitButton() {
-    this._submitButtonElement.classList.add(this._inactiveButtonClass);
+    this._formElement.querySelector(this._submitButtonSelector).classList.add(this._inactiveButtonClass);
     this._submitButtonElement.disabled = true;
 
   }
 
   _enableSubmitButton() {
-    this._submitButtonElement.classList.remove(this._inactiveButtonClass);
+    this._formElement.querySelector(this._submitButtonSelector).classList.remove(this._inactiveButtonClass);
     this._submitButtonElement.disabled = false;
   }
 
@@ -63,6 +66,14 @@ class FormValidator {
     });
   }
 
+  resetFormValidity() {
+    const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
+    inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement);
+    });
+    this._enableSubmitButton();
+  }
+
   enableValidation() {
     this._formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
@@ -71,14 +82,13 @@ class FormValidator {
   }
 }
 
-
 const form1 = document.querySelector('.popup__form');
 
 const formValidator1 = new FormValidator({
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save-button',
   inactiveButtonClass: 'popup-button_inactive',
-  inputErrorClass: '.popup__input-error',
+  inputErrorClass: 'popup__input-error',
   popupValid: 'popup_input-invalid'
 }, form1);
 
@@ -88,10 +98,24 @@ const formValidator2 = new FormValidator({
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save-button',
   inactiveButtonClass: 'popup-button_inactive',
-  inputErrorClass: '.popup__input-error',
+  inputErrorClass: 'popup__input-error',
   popupValid: 'popup_input-invalid'
 }, form2);
 
+const popupCloseAdd = popupAdd.querySelector('.popup__close');
+const buttonOpenAdd = document.querySelector('.profile__add-button');
+popupCloseAdd.addEventListener('click', function () {
+  closeAnyPopup(popupAdd);
+  formValidator2.resetFormValidity();
+});
+
+const openPopupAdd = () => {
+  openAnyPopup(popupAdd);
+  formValidator2.resetFormValidity(); 
+  formValidator2.enableValidation();
+};
+
+buttonOpenAdd.addEventListener('click', openPopupAdd);
 
 formValidator1.enableValidation();
 formValidator2.enableValidation();

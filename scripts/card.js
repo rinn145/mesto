@@ -1,19 +1,16 @@
-import { openAnyPopup } from './index.js';
-import { closeAnyPopup } from './index.js';
+import { openAnyPopup, closeAnyPopup } from './index.js';
 
 
-
-export default class Card {
-    constructor(data, templateSelector) {
-        this._name = data.name;
-        this._link = data.link;
-        this._templateSelector = templateSelector;
-        this._popupImage = document.querySelector('.popup-image');
-        this._imageClossButton = this._popupImage.querySelector('.popup__close');
-        this._photoPopupImage = this._popupImage.querySelector('.popup__open');
-        this._titlePopupImage = this._popupImage.querySelector('.popup-image__title-images');
+export default class Card { 
+    constructor(data, templateSelector) { 
+        this._name = data.name; 
+        this._link = data.link; 
+        this._templateSelector = templateSelector; 
+        this._popupImage = document.querySelector('.popup-image'); 
+        this._imageClossButton = this._popupImage.querySelector('.popup__close'); 
+        this._photoPopupImage = this._popupImage.querySelector('.popup__open'); 
+        this._titlePopupImage = this._popupImage.querySelector('.popup-image__title-images'); 
     }
-
     _getTemplate() {
         const cardElement = document
             .querySelector(this._templateSelector)
@@ -27,10 +24,6 @@ export default class Card {
         this._deleteButton = this._element.querySelector('.trash');
         this._cardImage = this._element.querySelector('.card__images');
         
-        this._imageClossButton.addEventListener("click", () => { 
-            this._handleClosePicture();   
-         });
-
         this._likeButton.addEventListener('click', () => {
             this._handleLikeIcon();
         });
@@ -45,6 +38,13 @@ export default class Card {
 
     }
 
+    _handlePreviewPicture() {
+        this._photoPopupImage.src = this._link;
+        this._titlePopupImage.textContent = this._name;
+        this._photoPopupImage.alt = this._name;
+        openAnyPopup(this._popupImage);
+      }
+    
     _handleLikeIcon() {
         this._likeButton.classList.toggle('card__darck-like-button');
     }
@@ -58,10 +58,6 @@ export default class Card {
         this._titlePopupImage.textContent = this._name;
         this._photoPopupImage.alt = this._name;
         openAnyPopup(this._popupImage);
-    }
-
-    _handleClosePicture() {
-        closeAnyPopup(this._popupImage);
     }
 
     createCard() {
@@ -110,7 +106,9 @@ const initialCards = [
 ];
 const popupAdd = document.querySelector('.popup-add');
 const formPopupAdd = popupAdd.querySelector('.popup__form');
-const popupSaveButton = popupAdd.querySelector('.popup__save-button');
+const urlCards = document.querySelector('#url-input');
+const namesCards = document.querySelector('#namesCards-input');
+
 function handleFormSubmitAdd(evt)  {
     evt.preventDefault();
     const newCard = {
@@ -119,9 +117,6 @@ function handleFormSubmitAdd(evt)  {
     };
     
     evt.target.reset();
-
-    popupSaveButton.classList.add('popup-button_inactive');
-    popupSaveButton.disabled = true;
 
     const cardElement = createCard(newCard);
     cardsContainer.prepend(cardElement);
@@ -135,9 +130,6 @@ initialCards.forEach((item) => {
 });
 
 
-
-const urlCards = document.querySelector('#url-input');
-const namesCards = document.querySelector('#namesCards-input');
 
 function createCard(item) {
     const card = new Card(item, cardsTemplate);
