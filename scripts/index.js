@@ -1,7 +1,6 @@
 const popupContainer = document.querySelector('.popup__container');
 const editProfile = document.querySelector('.popup-edit');
 const buttonOpenEdit = document.querySelector('.profile__edit-button');
-const buttonOpenAdd = document.querySelector('.profile__add-button');
 const popupAdd = document.querySelector('.popup-add');
 const closeEditProfile = editProfile.querySelector('.popup__close');
 const userName = document.querySelector('#name-input');
@@ -75,5 +74,4 @@ buttonOpenEdit.addEventListener('click', openPopupProfile);
 closeEditProfile.addEventListener('click', function () { closeAnyPopup(editProfile) });
 popupCloseAdd.addEventListener('click', function () { closeAnyPopup(popupAdd) });
 formPopupEdit.addEventListener('submit', handleFormEditProfile);
-buttonOpenAdd.addEventListener('click', function () { openAnyPopup(popupAdd)});
 popupCloseImage.addEventListener('click', function() { closeAnyPopup(popupImage)});
